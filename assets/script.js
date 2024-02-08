@@ -51,27 +51,3 @@ let position = 0;
 	  BaliseImage.src =("./assets/images/slideshow/" + slides[position].image)
 	  paragraphe.innerHTML = slides[position].tagLine  
  })
-// function previouSlide() {
-// 	dot[position].classList.remove("dot_selected");
-// 	if (position == 0) {
-// 	  position = slides.length - 1;
-// 	} else {
-// 	  position--;
-// 	}
-// 	dot[position].classList.add("dot_selected");
-// 	BaliseImage.src =("./assets/images/slideshow/" + slides[position].image)
-//   paragraphe.innerHTML = slides[position].tagLine
-//   }
-//    flecheGauche.addEventListener("click", previouSlide)
-//    function nextSlide() {
-// 	dot[position].classList.remove("dot_selected");
-// 	if (position == slides.length-1) {
-// 	  position = 0;
-// 	} else {
-// 	  position++;
-// 	}
-// 	dot[position].classList.add("dot_selected");
-// 	BaliseImage.src =("./assets/images/slideshow/" + slides[position].image)
-//     paragraphe.innerHTML = slides[position].tagLine
-//   }
-//   flecheDroite.addEventListener("click",nextSlide)
