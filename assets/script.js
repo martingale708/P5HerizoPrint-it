@@ -17,18 +17,18 @@ const slides = [
 	}
 ]
 let position = 0;
- const flecheGauche =document.querySelector(".arrow_left");
+ const arrowLeft =document.querySelector(".arrow_left");
 //  console.log(flecheGauche);
- const flecheDroite = document.querySelector(".arrow_right");
+ const arrowRight = document.querySelector(".arrow_right");
 //  console.log(flecheDroite);
  const dot = document.querySelectorAll(".dot");
 //  console.log(dot)
- const paragraphe = document.querySelector("#banner p");
+ const paragraph = document.querySelector("#banner p");
 //  console.log(paragraphe);
- const BaliseImage = document.querySelector(".banner-img");
+ const imageTag = document.querySelector(".banner-img");
 //  console.log(BaliseImage);
 
- flecheGauche.addEventListener("click", function(){
+ arrowLeft.addEventListener("click", function(){
     dot[position].classList.remove("dot_selected")
 	  if(position == 0){
 		position=slides.length-1;
@@ -38,7 +38,7 @@ let position = 0;
 	  slide();
   } )
 
- flecheDroite.addEventListener("click", function(){
+ arrowRight.addEventListener("click", function(){
  	dot[position].classList.remove("dot_selected")
 	  if(position ==slides.length-1){
 		position=0;
@@ -51,6 +51,6 @@ let position = 0;
 
  function slide(){
 	dot[position].classList.add("dot_selected")
-	BaliseImage.src =(`./assets/images/slideshow/${slides[position].image}`)
-   paragraphe.innerHTML = slides[position].tagLine
+	imageTag.src =(`./assets/images/slideshow/${slides[position].image}`)
+   paragraph.innerHTML = slides[position].tagLine
  }
