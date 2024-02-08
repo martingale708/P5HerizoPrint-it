@@ -35,10 +35,10 @@ let position = 0;
 	  } else{
 		position--;
  	  }
- 	  dot[position].classList.add("dot_selected")
- 	  BaliseImage.src =(`./assets/images/slideshow/${slides[position].image}`)
-	  console.log(BaliseImage)
-	  paragraphe.innerHTML = slides[position].tagLine
+	  slide();
+ 	//   dot[position].classList.add("dot_selected")
+ 	//   BaliseImage.src =(`./assets/images/slideshow/${slides[position].image}`)
+	//   paragraphe.innerHTML = slides[position].tagLine
   } )
 
  flecheDroite.addEventListener("click", function(){
@@ -48,7 +48,14 @@ let position = 0;
 	  } else{
 		position++;
 	  }
- 	  dot[position].classList.add("dot_selected")
-	  BaliseImage.src =(`./assets/images/slideshow/${slides[position].image}`)
-	  paragraphe.innerHTML = slides[position].tagLine  
+	  slide();
+ 	//   dot[position].classList.add("dot_selected")
+	//   BaliseImage.src =(`./assets/images/slideshow/${slides[position].image}`)
+	//   paragraphe.innerHTML = slides[position].tagLine  
  })
+
+ function slide(){
+	dot[position].classList.add("dot_selected")
+	BaliseImage.src =(`./assets/images/slideshow/${slides[position].image}`)
+   paragraphe.innerHTML = slides[position].tagLine
+ }
