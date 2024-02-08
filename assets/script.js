@@ -49,6 +49,6 @@ let position = 0;
 		position++;
 	  }
  	  dot[position].classList.add("dot_selected")
-	  BaliseImage.src =("./assets/images/slideshow/" + slides[position].image)
+	  BaliseImage.src =(`./assets/images/slideshow/${slides[position].image}`)
 	  paragraphe.innerHTML = slides[position].tagLine  
  })
