@@ -23,9 +23,9 @@ let position = 0;
 //  console.log(flecheDroite);
  const dot = document.querySelectorAll(".dot");
 //  console.log(dot)
- let paragraphe = document.querySelector("#banner p");
+ const paragraphe = document.querySelector("#banner p");
 //  console.log(paragraphe);
- let BaliseImage = document.querySelector(".banner-img");
+ const BaliseImage = document.querySelector(".banner-img");
 //  console.log(BaliseImage);
 
  flecheGauche.addEventListener("click", function(){
@@ -36,7 +36,8 @@ let position = 0;
 		position--;
  	  }
  	  dot[position].classList.add("dot_selected")
- 	  BaliseImage.src =("./assets/images/slideshow/" + slides[position].image)
+ 	  BaliseImage.src =(`./assets/images/slideshow/${slides[position].image}`)
+	  console.log(BaliseImage)
 	  paragraphe.innerHTML = slides[position].tagLine
   } )
 
